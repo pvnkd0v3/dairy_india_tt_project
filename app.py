@@ -24,9 +24,13 @@ dairy.rename(columns={'quantity_sold_(liters/kg)': 'l/kg_sold',
 
 ##Change ddate coumn to datetime type
 dairy['date'] = pd.to_datetime(dairy['date'], format='%Y-%m-%d')
+<<<<<<< HEAD
 #Define any needed variables an columns
 dairy['year'] = dairy['date'].dt.year
 dairy['year'] = pd.Categorical(dairy['year'], categories=[2019, 2020, 2021, 2022], ordered=True)
+=======
+#Define any needed variables
+>>>>>>> c972c72e673b8951e77f063814cdd4aa0ed8efc6
 sequential_years = {'year': [2019, 2020, 2021, 2022]}
 dairy['month_year'] = dairy['date'].dt.to_period('M').astype(str)
 dairy['month_year'] = pd.to_datetime(dairy['month_year'])
