@@ -70,7 +70,7 @@ else:
     fig.update_xaxes(title_text='Dairy Sold (l/kg)')
     fig.update_yaxes(title_text='Count')
     fig.show()
-    st.ploty_chart(fig)
+    st.plotly_chart(fig)
 
 
 #Dairy Volume line chart
