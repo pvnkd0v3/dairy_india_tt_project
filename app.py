@@ -5,8 +5,28 @@ import plotly.express as px
 #Read and prepare dataset
 dairy_df = pd.read_csv('/home/kt/coding/tripleten_projects/dairy_india/dairy_dataset.csv')
 dairy = dairy_df.iloc[:, [4,5,15,16,17,22]].copy()
+##Convert columns to snakecase
+def to_snake_case(column_name):
+    ### Converting each column name to snakcase by splitting them by spaces and join using underscores
+    
+    return '_'.join(column_name.lower().split())
 
-#Define any needed variables
+
+### Apply the to_snake_case function to each column
+dairy.columns = [to_snake_case(col) for col in dairy.columns]
+
+##Rename columns
+dairy.rename(columns={'quantity_sold_(liters/kg)': 'l/kg_sold',
+                      'price_per_unit_(sold)': 'price_per_unit_sold',
+                      'approx._total_revenue(inr)': 'approx_revenue_inr',
+                      'reorder_quantity_(liters/kg)': 'l/kg_reordered'},
+            inplace=True)
+
+##Change ddate coumn to datetime type
+dairy['date'] = pd.to_datetime(dairy['date'], format='%Y-%m-%d')
+#Define any needed variables an columns
+dairy['year'] = dairy['date'].dt.year
+dairy['year'] = pd.Categorical(dairy['year'], categories=[2019, 2020, 2021, 2022], ordered=True)
 sequential_years = {'year': [2019, 2020, 2021, 2022]}
 dairy['month_year'] = dairy['date'].dt.to_period('M').astype(str)
 dairy['month_year'] = pd.to_datetime(dairy['month_year'])
