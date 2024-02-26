@@ -17,15 +17,18 @@ To reproduce the project's analysis, create a conda environment using the EDA_en
 '''bash
 conda env create -f EDA_env.yml
 conda activate EDA_env
+'''
 
 ## Usage
 To run the dairy_india.ipynb notebook, enter the following command in the conda environment while in the project's directory:
 '''bash
 jupyter notebook dairy_india.ipynb
+'''
 
 To run the projects app.py app in Streamlit, enter the following command in the conda environment while in the project's directory:
 '''bash
 streamlit run app.py
+'''
 
 ## Results
 T-tests performed in dairy_india.ipynb yielded p-values much higher than the significance threshold of 0.5 when testing if these variables differed in the years 2019 (the year before before the COVID-19 lockdowns began) and 2020 (the year the lockdowns began) relative to the other years in the dataset:
