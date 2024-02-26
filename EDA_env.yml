@@ -1,0 +1,12 @@
+name: EDA_env
+channels:
+  - defaults
+dependencies:
+  - python=3.10.4
+  - pandas
+  - numpy
+  - plotly
+  - scipy
+  - jupyter
+  - streamlit
+  - altair
