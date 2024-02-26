@@ -29,6 +29,7 @@ To run the projects app.py app in Streamlit, enter the following command in the 
 ```bash
 streamlit run app.py
 ```
+Render link: https://dairy-india-tt-project.onrender.com/
 
 ## Results
 T-tests performed in dairy_india.ipynb yielded p-values much higher than the significance threshold of 0.5 when testing if these variables differed in the years 2019 (the year before before the COVID-19 lockdowns began) and 2020 (the year the lockdowns began) relative to the other years in the dataset:
