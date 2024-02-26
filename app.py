@@ -5,7 +5,8 @@ import plotly.express as px
 
 
 #Read and prepare dataset
-dairy_df = pd.read_csv('/home/kt/coding/tripleten_projects/dairy_india/dairy_dataset.csv')
+url = 'https://raw.githubusercontent.com/pvnkd0v3/dairy_india_tt_project/main/dairy_dataset.csv'
+dairy_df = pd.read_csv(url)
 dairy = dairy_df.iloc[:, [4,5,15,16,17,22]].copy()
 
     ##Convert columns to snakecase
