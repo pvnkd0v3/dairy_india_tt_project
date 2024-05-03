@@ -44,7 +44,7 @@ monthly_rev = dairy.groupby('month_year')['approx_revenue_inr'].sum().reset_inde
 
 #Title and app description
 st.header('Has COVID-19 Affected Dairy Sales in India?')
-st.markdown('**From a dataset containing 4325 dairy sales across India from 2019 to 2022, we looked at how the quanity of dairy sold, the prices, and total revenue made from dairy sales in India might have been affected by the onset of the COVID-19 lockdowns. Below are visualizations and statistical info condensed from the full Jupyter Notebook project exploring the data.**')
+st.markdown('**From a dataset containing 4325 dairy sales across India from 2019 to 2022, we looked at how the quantity of dairy sold, the prices, and total revenue made from dairy sales in India might have been affected by the onset of the COVID-19 lockdowns. Below are visualizations and statistical information condensed from the full Jupyter Notebook project exploring the data.**')
 st.divider()
 
 #Plot a histogram of dairy volume purchased by year that is overlaid by default unless the 'stacked' checkbox is ticked
